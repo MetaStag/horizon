@@ -6,7 +6,7 @@ import Dashboard from "./Components/Dashboard.tsx";
 import Sidebar from "./Components/Sidebar.tsx";
 import Navbar from "./Components/Navbar.tsx";
 import Search from "./Components/Search.tsx";
-
+import Game from "./Components/Game.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
@@ -17,6 +17,7 @@ createRoot(document.getElementById("root")!).render(
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/search" element={<Search />} />
+            <Route path="/game/:id" element={<Game />} />
           </Routes>
         </div>
       </div>

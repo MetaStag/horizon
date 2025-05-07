@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Search as SearchIcon } from "lucide-react";
+import Card from "./Card";
 
 export default function Search() {
   const [search, setSearch] = useState("");
@@ -38,16 +39,7 @@ export default function Search() {
 
       <div className="grid grid-cols-3 gap-4 m-8">
         {games.map((game) => (
-          <div key={game.slug} className="rounded-lg p-2 h-[20vw]" style={{backgroundImage: `url(${game.background_image})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
-            <div className="flex flex-col mt-auto bg-gray-700/40 w-fit p-2 rounded-lg">
-            <span>{game.name}</span>
-            <div className="flex flex-row gap-x-1">
-            {game.genres.map((genre: any) => (
-              <span className="bg-gray-700/40 rounded-lg p-1 text-sm">{genre.name}</span>
-            ))}
-            </div>
-            </div>
-          </div>
+          <Card key={game.slug} game={game} />
         ))}
       </div>
     </div>
