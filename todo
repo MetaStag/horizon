@@ -1,0 +1,11 @@
+-- frontend + games API
+- browse games
+- top games list
+- system requirements and comments, etc.
+-- fastapi backend
+- save games to library (to either purchase, or mark the games you own)
+- track games played
+- leave reviews (5 stars)
+- custom button css in index.css for standardization
+-- ai algorithm
+- ai-based recommendations based on the games in your library
